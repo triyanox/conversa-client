@@ -30,7 +30,7 @@ const Rp = () => {
       </h1>
       <p className="mt-4">All your friend requests will be shown here</p>
       {!data && !error && (
-        <div className="flex mt-8 flex-col h-full justify-center items-center gap-8 px-4">
+        <div className="flex mt-16 flex-col h-full justify-center items-center gap-8 px-4">
           <Loader />
         </div>
       )}
