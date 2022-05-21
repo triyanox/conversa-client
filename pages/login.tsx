@@ -5,7 +5,7 @@ import Login from "../components/ui/Login";
 const LoginPage: NextPage = () => {
   return (
     <Layout
-      pageTitle="Login"
+      pageTitle="Conversa - Login"
       description="Messenger of the new era"
       siteName="Conversa"
     >

@@ -5,7 +5,7 @@ import Signup from "../components/ui/Signup";
 const SignupPage: NextPage = () => {
   return (
     <Layout
-      pageTitle="Signup"
+      pageTitle="Conversa - Signup"
       description="Messenger of the new era"
       siteName="Conversa"
     >
