@@ -9,7 +9,7 @@ const Home: NextPage = () => {
 
   return (
     <Layout
-      pageTitle={loggedIn ? `Conversa | ${name}` : "Home"}
+      pageTitle={loggedIn ? `Conversa | ${name}` : "Conversa"}
       description="Conversa is a modern, open-source, and free messaging app"
     >
       {loggedIn ? <MainPage /> : <Hero />}
