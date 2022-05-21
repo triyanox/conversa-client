@@ -1,6 +1,6 @@
 # Conversa (Client)
 
-Conversa is a WebSocket text based messaging application built on top of [Socket.IO](https://socket.io/) with a focus on simplicity and ease of use.
+Conversa is a WebSocket based text messaging application built on top of [Socket.IO](https://socket.io/) with a focus on simplicity and ease of use.
 
 # Technical Overview
 
