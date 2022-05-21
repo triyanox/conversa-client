@@ -19,7 +19,10 @@ const Layout = (props: {
         <meta name="theme-color" content="#000000" />
         <meta name="robots" content="follow, index" />
         <title>{props.pageTitle}</title>
-        <meta name="description" content="Shortify - URL shortener service" />
+        <meta
+          name="description"
+          content="Conversa - Messenger of the new Era"
+        />
         <meta name="author" content="Mohamed Achaq" />
         <meta
           property="og:site_name"
