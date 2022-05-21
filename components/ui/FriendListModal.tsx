@@ -83,7 +83,14 @@ function FriendListModal(props: Props) {
                   <div className="flex mt-8 flex-col w-full justify-start items-center gap-2 px-4">
                     {results.length > 0
                       ? results.map((friend) => (
-                          <FriendsCard Clicked={props.setIsOpen} {...friend} />
+                          <FriendsCard
+                            Clicked={props.setIsOpen}
+                            friend={{
+                              friendId: friend.friendId,
+                              friendName: friend.friendName,
+                              friendEmail: friend.friendEmail,
+                            }}
+                          />
                         ))
                       : data.map(
                           (friend: {
@@ -93,7 +100,11 @@ function FriendListModal(props: Props) {
                           }) => (
                             <FriendsCard
                               Clicked={props.setIsOpen}
-                              {...friend}
+                              friend={{
+                                friendId: friend.friendId,
+                                friendName: friend.friendName,
+                                friendEmail: friend.friendEmail,
+                              }}
                             />
                           )
                         )}

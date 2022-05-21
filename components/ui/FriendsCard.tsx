@@ -2,9 +2,11 @@ import { useChat } from "../hooks/Chat";
 import Avatar from "./Avatar";
 
 type FriendProp = {
-  friendId: string;
-  friendName: string;
-  friendEmail: string;
+  friend: {
+    friendId: string;
+    friendName: string;
+    friendEmail: string;
+  };
   Clicked: (isOpen: boolean) => void;
 };
 
@@ -23,9 +25,9 @@ const FriendsCard = (props: FriendProp) => {
     props.Clicked(false);
     setIsActive(true);
     setFriend({
-      friendId: props.friendId,
-      friendName: props.friendName,
-      friendEmail: props.friendEmail,
+      friendId: props.friend.friendId,
+      friendName: props.friend.friendName,
+      friendEmail: props.friend.friendEmail,
     });
   };
   return (
@@ -33,8 +35,8 @@ const FriendsCard = (props: FriendProp) => {
       onClick={handleChat}
       className="w-full px-4  py-2 flex flex-row justify-start items-center bg-zinc-100 dark:bg-zinc-900 rounded-lg gap-8"
     >
-      <Avatar name={props.friendName} />
-      <h1>{props.friendName}</h1>
+      <Avatar name={props.friend.friendName} />
+      <h1>{props.friend.friendName}</h1>
     </button>
   );
 };
