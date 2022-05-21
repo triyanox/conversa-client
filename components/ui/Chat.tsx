@@ -142,9 +142,9 @@ const Chat = () => {
           <div className="flex px-4 md:px-8 rounded-xl z-10 shadow-xl  py-4 mt-4 justify-between items-center bg-zinc-200 dark:bg-zinc-800 w-full gap-4">
             <div className="w-full flex justify-start items-center gap-4">
               <Avatar name={friend.friendName} />
-              <h1 className="text-xl md:text-2xl font-bold text-black dark:text-white">
+              {/* <h1 className="text-xl md:text-2xl font-bold text-black dark:text-white">
                 {friend.friendName}
-              </h1>
+              </h1> */}
             </div>
             <div className="w-full flex justify-end items-center gap-4">
               <DeleteButton handleDelete={openDelPopUp} />
