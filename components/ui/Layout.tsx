@@ -37,12 +37,18 @@ const Layout = (props: {
         />
         <meta
           name="keywords"
-          content="Mohamed Achaq,Shortify, HTML, CSS, JavaScript, React, Typescript, NodeJs, Python"
+          content="Mohamed Achaq,Conversa, HTML, CSS, JavaScript, React, Typescript, NodeJs, Python"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://shortify.achaq.codes/" />
-        <meta property="og:title" content="Shortify - URL shortener servic" />
-        <meta property="og:description" content="URL shortener servic" />
+        <meta property="og:url" content="https://conversa.achaq.codes/" />
+        <meta
+          property="og:title"
+          content="Conversa - Messenger of the new Era"
+        />
+        <meta
+          property="og:description"
+          content="Conversa - Messenger of the new Era"
+        />
       </Head>
 
       <NavBar />
