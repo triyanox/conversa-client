@@ -1,7 +1,8 @@
 {
-  "name": "client",
-  "version": "0.1.0",
-  "private": true,
+  "name": "conversa-client",
+  "version": "1.0.0",
+  "description": "Text based messaging app",
+  "author": "Mohamed Achaq",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,16 +10,31 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.1",
+    "@nextui-org/react": "^1.0.0-beta.7",
+    "axios": "^0.27.2",
+    "classnames": "^2.3.1",
+    "framer-motion": "^6.3.3",
+    "jwt-decode": "^3.1.2",
     "next": "12.1.6",
+    "next-themes": "^0.2.0",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "react-hot-toast": "^2.2.0",
+    "react-icons": "^4.3.1",
+    "react-intersection-observer": "^9.1.0",
+    "socket.io-client": "^4.5.1",
+    "swr": "^1.3.0"
   },
   "devDependencies": {
     "@types/node": "17.0.33",
     "@types/react": "18.0.9",
     "@types/react-dom": "18.0.4",
+    "autoprefixer": "^10.4.7",
     "eslint": "8.15.0",
     "eslint-config-next": "12.1.6",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24",
     "typescript": "4.6.4"
   }
 }
