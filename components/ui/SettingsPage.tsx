@@ -45,7 +45,7 @@ const SettingsPage = () => {
 
   return (
     <section className=" pt-28 pb-44  flex flex-col items-center justify-center px-8 md:px-16">
-      <h1 className="text-3xl mt-12 py-2 md:text-4xl text-black dark:text-white">
+      <h1 className="text-3xl mt-16 py-2 md:text-4xl text-black dark:text-white">
         Update your account
       </h1>
       <form
