@@ -2,6 +2,7 @@ import Head from "next/head";
 import NavBar from "./NavBar";
 import { ReactNode } from "react";
 import Footer from "./Footer";
+import { useUser } from "../hooks/User";
 
 const Layout = (props: {
   pageTitle?: string;
@@ -10,6 +11,7 @@ const Layout = (props: {
   children?: ReactNode;
   preview?: string;
 }) => {
+  const { loggedIn } = useUser();
   return (
     <>
       <Head>
@@ -53,7 +55,7 @@ const Layout = (props: {
 
       <NavBar />
       {props.children}
-      <Footer />
+      {!loggedIn && <Footer />}
     </>
   );
 };
