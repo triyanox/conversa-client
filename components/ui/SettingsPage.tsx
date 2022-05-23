@@ -50,14 +50,14 @@ const SettingsPage = () => {
       </h1>
       <form
         onSubmit={handleSubmit}
-        className="mt-16 justify-center items-center flex gap-8 flex-col w-full"
+        className="mt-8 justify-center items-center flex gap-8 flex-col w-full"
       >
         <NameInput form={data} setForm={setData} />
         <EmailInput form={data} setForm={setData} />
         <PasswordInput form={data} setForm={setData} />
         <SubmitButton text="Update" />
       </form>
-      <h1 className="text-3xl mt-12 py-2 md:text-4xl text-black dark:text-white">
+      <h1 className="text-3xl mt-16 py-2 md:text-4xl text-black dark:text-white">
         Delete your account
       </h1>
       <form
