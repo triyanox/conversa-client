@@ -27,7 +27,7 @@ const AddFriend = () => {
         Add a friend
       </h1>
       <p className="mt-4 text-center">
-        Add a friend by entering their email address. They will be notified
+        Add a friend by entering their email address
       </p>
 
       <form
