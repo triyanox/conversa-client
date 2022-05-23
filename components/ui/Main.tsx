@@ -4,7 +4,7 @@ import { ChatProvider } from "../hooks/Chat";
 
 const MainPage = () => {
   return (
-    <section className="pt-28 w-full flex flex-col lg:flex-row items-center justify-center gap-4 px-8  md:px-12">
+    <section className="pt-28 w-full flex flex-col lg:flex-row items-center justify-center gap-4 px-2  md:px-12">
       <ChatProvider>
         <Sidebar />
         <Chat />
