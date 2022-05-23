@@ -24,8 +24,8 @@ const Rp = () => {
   };
 
   return (
-    <section className=" pt-48 pb-52  flex flex-col items-center justify-center px-8 md:px-16">
-      <h1 className="text-3xl  py-2 md:text-4xl text-black dark:text-white">
+    <section className="min-h-screen flex flex-col items-center justify-center px-8 md:px-16">
+      <h1 className="text-3xl py-2 md:text-4xl text-black dark:text-white">
         Your Friend Requests
       </h1>
       <p className="mt-4">All your friend requests will be shown here</p>
@@ -49,7 +49,6 @@ const Rp = () => {
           )}
         </div>
       )}
-
       {error && (
         <div className="flex font-bold text-lg md:text-xl flex-col h-full justify-center items-center gap-8 mt-16 px-4">
           <p className="text-red-500 text-center">{error.message} !</p>
