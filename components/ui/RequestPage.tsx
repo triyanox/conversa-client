@@ -24,11 +24,11 @@ const Rp = () => {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-start px-8 md:px-16">
-      <h1 className="text-3xl py-8 md:text-4xl text-black dark:text-white">
-        Your Friend Requests
+    <section className="min-h-screen pt-28 flex flex-col items-center justify-start px-8 md:px-16">
+      <h1 className="text-3xl mt-12 py-2 md:text-4xl text-black dark:text-white">
+        Friend Requests
       </h1>
-      <p className="mt-4">All your friend requests will be shown here</p>
+      <p className="mt-4">Your friend requests will be shown here</p>
       {!data && !error && (
         <div className="flex mt-16 flex-col h-full justify-center items-center gap-8 px-4">
           <Loader />
