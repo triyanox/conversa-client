@@ -50,7 +50,7 @@ const SettingsPage = () => {
       </h1>
       <form
         onSubmit={handleSubmit}
-        className="mt-8 justify-center items-center flex gap-8 flex-col w-full"
+        className="mt-10 justify-center items-center flex gap-8 flex-col w-full"
       >
         <NameInput form={data} setForm={setData} />
         <EmailInput form={data} setForm={setData} />
@@ -62,7 +62,7 @@ const SettingsPage = () => {
       </h1>
       <form
         onSubmit={handleDelete}
-        className="mt-10 justify-center items-center flex gap-8 flex-col w-full"
+        className="mt-8 justify-center items-center flex gap-8 flex-col w-full"
       >
         <SubmitButtonDel text="Delete" />
       </form>
