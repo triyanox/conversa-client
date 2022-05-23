@@ -115,7 +115,7 @@ function FriendListModal(props: Props) {
                     <h3 className="text-lg md:text-xl text-black dark:text-white font-bol mb-4">
                       No friends found
                     </h3>
-                    <p className="text-center text-zinc-500">{error.message}</p>
+<!--                     <p className="text-center text-zinc-500">{error.message}</p> -->
                   </div>
                 )}
               </Dialog.Panel>
