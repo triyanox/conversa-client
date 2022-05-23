@@ -24,8 +24,8 @@ const Rp = () => {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-8 md:px-16">
-      <h1 className="text-3xl py-2 md:text-4xl text-black dark:text-white">
+    <section className="min-h-screen flex flex-col items-center justify-start px-8 md:px-16">
+      <h1 className="text-3xl py-8 md:text-4xl text-black dark:text-white">
         Your Friend Requests
       </h1>
       <p className="mt-4">All your friend requests will be shown here</p>
