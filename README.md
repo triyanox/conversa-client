@@ -8,10 +8,11 @@ This application is built [Next.js](https://nextjs.org/) with [TypeScript](https
 
 ## Installation
 
-To try this application out locally, you can run the following command:
+To try this application out locally, you can run the following commands:
 
 ```bash
-git clone
+git clone https://github.com/triyanox/conversa-client.git
+cd conversa-client
 ```
 
 Install the dependencies and start a development server on **localhost:3000**
