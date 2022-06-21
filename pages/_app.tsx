@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import jwtDecode from "jwt-decode";
 import { AnimatePresence, motion } from "framer-motion";
 import { UserContext } from "../components/hooks/User";
+import { SWRConfig } from "swr";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const NextRouter = useRouter();
@@ -73,7 +74,9 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       >
         <UserContext.Provider value={user}>
           <NextThemesProvider attribute="class">
-            <Component {...pageProps} />
+            <SWRConfig>
+              <Component {...pageProps} />{" "}
+            </SWRConfig>
           </NextThemesProvider>
         </UserContext.Provider>
       </motion.div>
