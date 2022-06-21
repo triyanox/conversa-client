@@ -33,7 +33,7 @@ const Login = () => {
 
       <form
         onSubmit={handleSubmit}
-        className="mt-16 justify-center px-8 items-center flex gap-8 mb-4 flex-col w-full"
+        className="mt-16 justify-center px-8 items-center flex gap-4 mb-4 flex-col w-full"
       >
         <EmailInput form={data} setForm={setData} />
         <PasswordInput form={data} setForm={setData} />
