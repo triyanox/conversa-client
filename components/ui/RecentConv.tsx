@@ -1,4 +1,3 @@
-import { IoMdRefresh } from "react-icons/io";
 import useSWR from "swr";
 import config from "../../config/production.json";
 import * as http from "../../lib/http";
@@ -9,9 +8,7 @@ const RecentConv = () => {
   const endPoint = `${config.baseUrl}/conversation/recent`;
   const fetcher = (url: string) =>
     http.default.get(url).then((res) => res.data);
-  const { data, error } = useSWR(endPoint, fetcher, {
-    refreshInterval: 1000,
-  });
+  const { data, error } = useSWR(endPoint, fetcher);
   return (
     <section className="w-full hidden lg:block h-full mt-2 rounded-2xl  py-4 px-2 text-left align-middle  transition-all">
       <div className="text-xl md:text-2xl flex justify-between items-center font-bold py-2 px-4 mb-4 leading-6 text-zinc-900 dark:text-zinc-100">
