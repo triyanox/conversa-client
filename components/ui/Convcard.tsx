@@ -39,7 +39,7 @@ const Convcard = (props: ConvProps) => {
   return (
     <button
       onClick={handleChat}
-      className="w-full px-6 py-2 flex flex-col justify-center items-start bg-zinc-200 dark:bg-zinc-800 rounded-lg gap-1"
+      className="w-full px-6 py-2 flex flex-col justify-center items-start bg-zinc-100 dark:bg-zinc-800 rounded-lg gap-1"
     >
       <h1 className="text-lg font-bold md:text-xl">{otherMemberName}</h1>
       <h1 className="text-md md:text-lg">{props.lastMessage.slice(0, 20)}</h1>
