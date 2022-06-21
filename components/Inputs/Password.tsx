@@ -1,4 +1,4 @@
-import { ChangeEvent, Fragment, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
 
 type Props = {
@@ -43,9 +43,9 @@ const PasswordInput = (props: Props) => {
   };
 
   return (
-    <div className="relative  flex justify-center items-center">
+    <div className="relative pb-4 flex justify-center items-center">
       <input
-        className={`w-[360px] md:w-[400px] rounded-lg    
+        className={`w-[360px] md:w-[400px] rounded-2xl   
       ${
         helper.color === "error"
           ? "text-red-600 dark:text-red-400 bg-red-200 dark:bg-red-600 dark:bg-opacity-20"
@@ -54,7 +54,7 @@ const PasswordInput = (props: Props) => {
           : "text-black dark:text-white bg-zinc-100 dark:bg-zinc-900"
       }
       
-      px-3 py-3 text-lg font-medium  outline-none focus:scale-[102%]  focus:drop-shadow-md focus:placeholder:invisible dark:focus:placeholder:text-zinc-900 transition-all duration-200 `}
+      px-3 py-3 text-lg font-medium  outline-none focus:scale-[102%]  focus:drop-shadow-md focus:placeholder:invisible dark:focus:placeholder:text-zinc-900  transition-all duration-200 `}
         onChange={handleChange}
         value={password}
         type={showPassword ? "text" : "password"}
