@@ -7,10 +7,12 @@ import io from "socket.io-client";
 import * as conversation from "../../lib/conversation";
 import { useUser } from "../hooks/User";
 import { MessageCardReciver, MessageCardSender } from "./MessageCard";
-import { CloseButton, DeleteButton } from "./Buttons";
+import { CloseButton, DeleteChatButton } from "./Buttons";
 import socketConfig from "../../config/socket.json";
 import DelPopUp from "./DeletePopUp";
 import toast, { Toaster } from "react-hot-toast";
+import { useSWRConfig } from "swr";
+import config from "../../config/production.json";
 
 const socket = io(socketConfig.socketUrl);
 
@@ -21,6 +23,8 @@ type MessageList = {
 };
 
 const Chat = () => {
+  const { mutate } = useSWRConfig();
+
   let [isOpen, setIsOpen] = useState(false);
 
   const openDelPopUp = () => {
@@ -42,6 +46,7 @@ const Chat = () => {
       setIsActive(false);
       closeModal();
       toast.success("Conversation deleted!");
+      mutate(`${config.baseUrl}/conversation/recent`);
     } catch (ex: any) {
       toast.error(ex.response.data);
       closeModal();
@@ -79,6 +84,7 @@ const Chat = () => {
       message: string;
     }) => {
       setMessageList((prevState) => [...prevState, data]);
+      mutate(`${config.baseUrl}/conversation/recent`);
       scrollBottom();
     };
     socket.on("message", listener);
@@ -126,7 +132,7 @@ const Chat = () => {
   };
 
   return (
-    <section className="w-full h-3/5  md:py-0 md:h-screen flex lg:bg-zinc-100 lg:dark:bg-zinc-900 rounded-lg flex-row items-center justify-center px-4 md:px-8">
+    <section className="w-full h-3/5  md:py-0 md:h-screen flex lg:bg-zinc-50 lg:dark:bg-zinc-900 rounded-2xl flex-row items-center justify-center px-4 md:px-8">
       {!isActive && (
         <div className="w-full py-16 justify-center gap-4 items-center flex flex-col">
           <h1 className="text-xl md:text-2xl font-bold text-center text-black dark:text-white">
@@ -139,7 +145,7 @@ const Chat = () => {
       )}
       {isActive && (
         <div className="w-full text-xl md:text-2xl h-full justify-center  items-center flex flex-col">
-          <div className="flex px-4 md:px-8 rounded-xl z-10 shadow-xl  py-4 mt-4 justify-between items-center bg-zinc-200 dark:bg-zinc-800 w-full gap-4">
+          <div className="flex px-4 md:px-8 rounded-2xl z-10 shadow-xl  py-4 mt-4 justify-between items-center bg-zinc-100 dark:bg-zinc-800 w-full gap-4">
             <div className="w-full flex justify-start items-center gap-4">
               <Avatar name={friend.friendName} />
               {/* <h1 className="text-xl md:text-2xl font-bold text-black dark:text-white">
@@ -147,7 +153,7 @@ const Chat = () => {
               </h1> */}
             </div>
             <div className="w-full flex justify-end items-center gap-4">
-              <DeleteButton handleDelete={openDelPopUp} />
+              <DeleteChatButton handleDelete={openDelPopUp} />
               <CloseButton handleClose={handleClose} />
             </div>
           </div>
@@ -179,9 +185,10 @@ const Chat = () => {
           <div
             className={`
           ${isOpen ? "hidden" : ""}
-          shadow-xl  sticky lg:relative z-50 bottom-4 transition-all duration-300 lg:bottom-auto flex px-4 md:px-8 rounded-xl mb-6 py-2  justify-between items-center bg-zinc-200 dark:bg-zinc-800 w-full gap-4`}
+          shadow-xl  sticky lg:relative  z-50 bottom-4 transition-all duration-300 lg:bottom-auto flex px-4 md:px-8 rounded-2xl mb-6 py-2  justify-between items-center bg-zinc-100 dark:bg-zinc-800 w-full gap-4`}
           >
             <MessageInput setForm={setData} form={data} />
+
             <button
               onClick={hanldeSend}
               className="text-4xl active:scale-90 duration-300 transition-all"
