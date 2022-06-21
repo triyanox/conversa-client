@@ -22,8 +22,8 @@ const AddFriend = () => {
   };
 
   return (
-    <section className=" pt-28 pb-44  flex flex-col items-center justify-center px-8 md:px-16">
-      <h1 className="text-3xl mt-12 py-2 md:text-4xl text-black dark:text-white">
+    <section className="min-h-screen pt-4 flex flex-col items-center justify-start px-8 md:px-16">
+      <h1 className="text-3xl font-bold mt-12 py-2 md:text-4xl text-black dark:text-white">
         Add a friend
       </h1>
       <p className="mt-4 text-center">
@@ -32,7 +32,7 @@ const AddFriend = () => {
 
       <form
         onSubmit={handleSubmit}
-        className="mt-16 justify-center px-8 items-center flex gap-8 mb-4 flex-col w-full"
+        className="mt-16 justify-center px-8 items-center flex gap-4 mb-4 flex-col w-full"
       >
         <EmailInput form={data} setForm={setData} />
         <SubmitButton text="Add" />
