@@ -20,7 +20,7 @@ const Sidebar = () => {
 
   const { name } = useUser();
   return (
-    <div className="w-full lg:w-2/5 lg:h-screen lg:bg-zinc-100 lg:dark:bg-zinc-900 rounded-lg flex flex-row lg:flex-col gap-4">
+    <div className="w-full lg:w-2/5 lg:h-screen lg:bg-zinc-50 lg:dark:bg-zinc-900 rounded-2xl flex flex-row lg:flex-col gap-4">
       <div className="flex  w-full lg:w-auto flex-row justify-between items-center gap-8 px-6 lg:px-4 py-4">
         <AvatarWithLink link="/settings" name={name} />
         <div className="flex flex-row justify-start items-center gap-2">
