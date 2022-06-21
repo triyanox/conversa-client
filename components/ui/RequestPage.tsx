@@ -11,7 +11,7 @@ const fetcher = (url: string) => http.default.get(url).then((res) => res.data);
 
 const Rp = () => {
   const { data, error } = useSWR(endPoint, fetcher, {
-    refreshInterval: 3000,
+    refreshInterval: 10000,
   });
   const handleAccept = async (id: string) => {
     const res = user.acceptFriendRequest(id);
@@ -24,8 +24,8 @@ const Rp = () => {
   };
 
   return (
-    <section className="min-h-screen pt-28 flex flex-col items-center justify-start px-8 md:px-16">
-      <h1 className="text-3xl mt-12 py-2 md:text-4xl text-black dark:text-white">
+    <section className="min-h-screen pt-4 flex flex-col items-center justify-start px-2 md:px-16">
+      <h1 className="text-3xl font-bold mt-12 py-2 md:text-4xl text-black dark:text-white">
         Friend Requests
       </h1>
       <p className="mt-4">Your friend requests will be shown here</p>
