@@ -44,13 +44,13 @@ export default FriendsCard;
 
 export const FriendsCardWithAccept = (props: WithAccept) => {
   return (
-    <div className="w-full px-2 md:px-8  py-3 flex flex-row justify-between items-center bg-zinc-100 dark:bg-zinc-900 rounded-lg ">
+    <div className="w-full px-4 md:px-8  py-3 flex flex-row justify-between items-center bg-zinc-100 dark:bg-zinc-900 rounded-2xl ">
       <div className="flex justify-start items-center gap-8">
         <Avatar name={props.Friend.name} />
         <h1 className="text-xl md:text-2xl font-bold">{props.Friend.name}</h1>
       </div>
       <button
-        className="py-1 px-4 md:px-8 rounded-md text-lg md:text-xl font-bold text-white dark:text-black bg-black dark:bg-white"
+        className="py-2 px-4 md:px-8 rounded-xl text-lg md:text-xl font-bold text-white dark:text-black bg-black dark:bg-white"
         onClick={() => {
           props.accept(props.Friend._id);
         }}
