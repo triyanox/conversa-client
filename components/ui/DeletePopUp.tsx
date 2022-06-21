@@ -51,7 +51,7 @@ const DelPopUp = (props: Props) => {
                 <div className="mt-4 flex justify-start items-center gap-4">
                   <button
                     type="button"
-                    className="inline-flex justify-center rounded-md border border-transparent bg-black dark:bg-white px-4 py-2 text-sm font-medium text-zinc-100 dark:text-zinc-900  "
+                    className="inline-flex transition-all duration-300 justify-center rounded-2xl active:scale-90 border border-transparent bg-black dark:bg-white px-4 py-2 text-sm font-medium text-zinc-100 dark:text-zinc-900  "
                     onClick={props.closeModal}
                   >
                     Cancel
@@ -59,7 +59,7 @@ const DelPopUp = (props: Props) => {
                   <button
                     type="button"
                     onClick={props.handleDelete}
-                    className="inline-flex justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-sm font-medium text-black hover:bg-red-700   "
+                    className="inline-flex transition-all duration-300 justify-center rounded-2xl active:scale-90 border border-transparent bg-red-600 px-4 py-2 text-sm font-medium text-black hover:bg-red-700   "
                   >
                     Delete
                   </button>
