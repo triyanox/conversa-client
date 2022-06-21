@@ -31,7 +31,7 @@ export const MessageCardSender = (props: CardProps) => {
         }}
         className="w-full my-2 flex justify-end items-center"
       >
-        <div className="max-w-xs md:max-w-md px-4 md:px-8 py-2 md:py-4 flex flex-col justify-center items-start gap-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 rounded-2xl ">
+        <div className="max-w-xs md:max-w-md px-4 md:px-8 py-2 md:py-4 flex flex-col justify-center items-start gap-1 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 rounded-2xl ">
           {/* <h2 className="text-lg font-bold md:text-xl lg:text-2xl text-black dark:text-white ">
             {props.user}
           </h2> */}
