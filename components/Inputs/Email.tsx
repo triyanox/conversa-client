@@ -40,7 +40,7 @@ const EmailInput = (props: Props) => {
   return (
     <div className="flex flex-col justify-center items-start">
       <input
-        className={`w-[360px] md:w-[400px] rounded-lg 
+        className={`w-[360px] md:w-[400px] rounded-2xl 
       ${
         helper.color === "error"
           ? "text-red-600 dark:text-red-400 bg-red-200 dark:bg-red-600 dark:bg-opacity-20"
