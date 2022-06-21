@@ -1,22 +1,24 @@
 import Link from "next/link";
+import { SiTwitter } from "react-icons/si";
+import { IconButton } from "./Buttons";
+
 const Footer = () => {
   return (
-    <footer className="dark:text-bright-gray-50 w-full mb-4 mt-8 md:mt-16 text-zinc-800 dark:text-zinc-200 px-8 md:px-12">
-      <div className="w-full flex flex-row items-center justify-center md:justify-start px-5 py-8 ">
-        <h1 className=" hidden sm:flex items-center font-medium text-zinc-800 dark:text-zinc-200 justify-start">
-          <span className="text-lg md:text-xl">Conversa</span>
+    <footer className="mt-24 flex w-full items-center justify-between px-6 py-4 pb-8 sm:px-8 flex-row md:px-12">
+      <div className="flex w-full flex-col items-start justify-center gap-2">
+        <h1 className="text-2xl font-bold text-black dark:text-white">
+          Conversa
         </h1>
-        <p className="text-md mt-4 text-zinc-800 dark:text-zinc-200 sm:ml-4 sm:mt-0 sm:border-l-2 sm:py-2 sm:pl-4">
-          Conversa © 2022 — Made By
-          <a
-            href="https://achaq.codes"
-            className="ml-2 font-bold"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Achaq
+        <h2 className="text-xl text-black dark:text-white">
+          Better Messages !
+        </h2>
+      </div>
+      <div className="mt-8 flex w-full flex-row items-start justify-end md:justify-end">
+        <Link href="https://twitter.com/ac__haq" passHref>
+          <a>
+            <IconButton icon={<SiTwitter />} />
           </a>
-        </p>
+        </Link>
       </div>
     </footer>
   );
